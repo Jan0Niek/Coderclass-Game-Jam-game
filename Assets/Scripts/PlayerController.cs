@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-<<<<<<< Updated upstream
     [SerializeField]
     Vector3 moveForce = new Vector3(5, 0, 5);
     [SerializeField]
     float jumpForce = 5f;
     public float score = 0f;
-=======
-    [SerializeField] private Vector3 moveForce = new Vector3(5, 0, 5);
-    [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private float strength;
-
->>>>>>> Stashed changes
     Rigidbody rb;
     bool isGrounded;
 
@@ -55,11 +48,6 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.CompareTag("Ground"))
         {
             isGrounded = true;
-        }
-        else if (collision.collider.CompareTag("BEACHBALL"))
-        {
-            Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position);
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(awayFromPlayer * strength, ForceMode.Impulse);
         }
     }
 }
