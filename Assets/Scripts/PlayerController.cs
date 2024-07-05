@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     Vector3 moveForce = new Vector3(5, 0, 5);
     [SerializeField]
     float jumpForce = 5f;
-
+    public float score = 0f;
     Rigidbody rb;
     bool isGrounded;
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6987507143877607046}
   - component: {fileID: 786533040575541308}
   - component: {fileID: 1969590242066983143}
+  - component: {fileID: 7880622435259632540}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -125,3 +126,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  player: {fileID: 7288366010300211805, guid: 9c9160958b73a5840a55737166cb0b9b, type: 3}
+--- !u!64 &7880622435259632540
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6713038600334286359}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6086759047139564000, guid: 540aa0ec98039b44cbe4d954ab76eba2, type: 3}

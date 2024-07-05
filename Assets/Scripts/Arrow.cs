@@ -5,15 +5,25 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public float life = 3;
+    public GameObject player;
 
     void Awake()
     {
         Destroy(gameObject, life);
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        if (other.gameObject.tag == "Target")
+        {
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                playerController.score += 1;
+                Debug.Log(playerController.score);
+            }
+
+
+        }
     }
 }
